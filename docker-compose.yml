@@ -1,0 +1,10 @@
+services:
+  api-sistema-ponto:
+    build: .
+    container_name: api-sistema-ponto
+    restart: unless-stopped
+    ports:
+      - "2424:2424"
+    volumes:
+      - .:/app
+      - ./imagens_rosto:/www/wwwroot/sistema-ponto-master/imagens_rosto
