@@ -3,8 +3,8 @@ services:
     build: .
     container_name: api-sistema-ponto
     restart: unless-stopped
+    entrypoint: ./entrypoint.sh
     ports:
-      - "2424:2424"
+      - "5000:5000"
     volumes:
       - .:/app
-      - ./imagens_rosto:/www/wwwroot/sistema-ponto-master/imagens_rosto
